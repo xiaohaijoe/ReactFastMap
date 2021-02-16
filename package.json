@@ -1,0 +1,68 @@
+{
+  "name": "react-fast-map",
+  "version": "1.0.0",
+  "private": false,
+  "description": "react-fast-map can render map instance only one time and no need to re-initialize",
+  "main": "index.js",
+  "files": [
+    "lib"
+  ],
+  "homepage": "https://github.com/xiaohaijoe/ReactFastMap",
+  "license": "MIT License",
+  "scripts": {
+    "analyze": "source-map-explorer build/static/js/*.js",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "deploy": "react-app-rewired build COMPONENT_PUBLISH=true",
+    "test": "react-app-rewired test",
+    "dist": "npx babel publish --out-dir lib"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-loadable": "^5.5.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.13",
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-decorators": "^7.7.4",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/preset-react": "^7.12.13",
+    "babel-loader": "8.1.0",
+    "babel-plugin-import": "^1.13.0",
+    "css-loader": "^3.4.0",
+    "customize-cra": "^1.0.0-alpha.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-react-app": "^5.1.0",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-flowtype": "^4.5.2",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "prettier": "^1.19.1",
+    "react-app-rewired": "^2.1.5",
+    "react-is": "^16.12.0",
+    "terser-webpack-plugin": "1.2.2",
+    "webpack-node-externals": "^2.5.2"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "theme": {
+    "primary-color": "#1DA57A"
+  }
+}
