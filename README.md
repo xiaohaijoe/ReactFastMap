@@ -2,6 +2,9 @@
 
 使用 Map 组件，可以缩短地图引擎的初始化时间。利用单例组件模式，将地图节点缓存下来，在页面或组件频繁切换时，达到略过初始化步骤，无延迟渲染地图的结果。
 
+![name](./public/resource/demo1.gif)<br>
+Even if the pages switch frequently, the Map Component don't need to wait rendering.
+
 ## Basic Usage
 
 ### Install
