@@ -2,7 +2,17 @@
 
 使用 Map 组件，可以缩短地图引擎的初始化时间。利用单例组件模式，将地图节点缓存下来，在页面或组件频繁切换时，达到略过初始化步骤，无延迟渲染地图的结果。
 
-## 1. 引入 api 文件
+## Basic Usage
+
+### Install
+
+```
+npm i react-fast-map
+// or
+yarn add react-fast-map
+```
+
+### 1. Import API file
 
 ```javascript
 // 1. 在/public/index.html中引入地图api
@@ -14,7 +24,7 @@
 </head>
 ```
 
-## 2. 定义初始化方法
+### 2. Create Initialization Function
 
 ```javascript
 // 2. 在项目入口文件中定义初始化函数，如/src/index.js 或/src/App.js
@@ -42,7 +52,7 @@ Map.initialize = () => {
 };
 ```
 
-## 3. 渲染地图/获取地图实例
+## 3. Render Map Component / Get Map Component Instance
 
 提供了<code>useMap</code>，<code>withMap</code>方法获取地图实例
 
