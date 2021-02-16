@@ -4,7 +4,7 @@ import DefaultLoading from './Loading';
 import Instance from './Instance';
 import Store from './Store';
 import { useMap, withMap } from './hooks';
-import styles from './Map.module.less';
+import './Map.css';
 
 /**
  * 地图初始化，Map.initialize请在src/index.js或src/App.js中实现
@@ -56,7 +56,7 @@ import styles from './Map.module.less';
  */
 
 const MapInit = props => {
-  const { mapId, onLoaded } = props;
+  const { mapId, onLoaded, className } = props;
   useEffect(() => {
     const onTrigger = (...props) => {
       Store.set(mapId, props);
@@ -74,11 +74,16 @@ const MapInit = props => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  return <div id={mapId} className={styles.map}></div>;
+  return (
+    <div
+      id={mapId}
+      className={['fast-map__map', className].filter(Boolean).join(' ')}
+    ></div>
+  );
 };
 
 const Map = props => {
-  const { mapId = 'DEFAULT', Loading } = props;
+  const { mapId = 'DEFAULT', Loading, className } = props;
   const [complete, setComplete] = useState(false);
   function onLoaded() {
     // MapInit地图实例化完成
@@ -95,7 +100,7 @@ const Map = props => {
   return (
     <>
       <Instance mapId={mapId} mount={onMount}>
-        <MapInit mapId={mapId} onLoaded={onLoaded} />
+        <MapInit mapId={mapId} className={className} onLoaded={onLoaded} />
       </Instance>
       {Loading ? (
         <>
@@ -114,7 +119,7 @@ Map.withMap = withMap;
 
 Map.propTypes = {
   mapId: PropTypes.string,
-  Loading: PropTypes.oneOfType([PropTypes.func, PropTypes.element]),
+  Loading: PropTypes.node,
 };
 
 Map.defaultProps = {

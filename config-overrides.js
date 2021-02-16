@@ -22,7 +22,7 @@ const addCustomize = () => config => {
   if (isComponentPublish) {
     config = {};
     config.mode = 'production';
-    config.entry = path.join(__dirname, './src/components/ScaleView/index.js');
+    config.entry = path.join(__dirname, './src/components/Map/index.js');
     config.output = {
       path: path.join(__dirname, './publish'),
       filename: 'index.js',

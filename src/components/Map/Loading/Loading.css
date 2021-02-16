@@ -1,4 +1,4 @@
-.fast-map__container {
+.fast-map-loading__container {
   opacity: 1;
   transition: opacity 1.5s;
   pointer-events: none;
@@ -11,11 +11,11 @@
         opacity: 0;
     } */
 }
-.fast-map__container.hidden {
+.fast-map-loading__container.hidden {
   opacity: 0;
 }
 
-.fast-map__loading {
+.fast-map-loading__animation {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -26,8 +26,8 @@
   -ms-perspective: 200px;
   perspective: 200px;
 }
-.fast-map__loading:before,
-.fast-map__loading:after {
+.fast-map-loading__animation:before,
+.fast-map-loading__animation:after {
   position: absolute;
 
   width: 12px;
@@ -38,10 +38,10 @@
 
   background: #050e1f;
 }
-.fast-map__loading:before {
+.fast-map-loading__animation:before {
   left: 0;
 }
-.fast-map__loading:after {
+.fast-map-loading__animation:after {
   right: 0;
 
   animation-delay: 0.15s;

@@ -6,11 +6,11 @@ const Loading = props => {
   return (
     <div
       style={style}
-      className={['fast-map__container', !value ? '' : 'hidden', className]
+      className={['fast-map-loading__container', !value ? '' : 'hidden', className]
         .filter(Boolean)
         .join(' ')}
     >
-      <div className={'fast-map__loading'}></div>
+      <div className={'fast-map-loading__animation'}></div>
     </div>
   );
 };
